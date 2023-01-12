@@ -7,11 +7,6 @@
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.title-primary{
-    font-size: 16px;
-    font-weight: 300;
-}
-
 body{
     background-color: #121212 !important;
     min-height: 100vh;
@@ -37,6 +32,11 @@ h1 {
     margin-top: 20px;
     margin-bottom: 10px;
     width: 800px;
+}
+
+.texto-parrafo {
+    color: #ffffff;
+    font-size: 18px;
 }
 
 /* BOTON FLOTANTE */
@@ -73,14 +73,20 @@ h2 {
 .intro {
     padding: 60px;
     display: flex;
-    gap: 60px;
-    margin-inline: 120px;
+    /* gap: 60px; */
+    /* margin-inline: 120px; */
+    width: 90%;
     flex: 1;
+
+    display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
 }
 
 h3 {
+    color: #b3b3b3;
     text-align: right;
-    width: 400px;
+    font-size: 100%;
 }
 
 .hidden {
@@ -167,6 +173,11 @@ h4 {
 
 
 /* SOBRE MI */
+.construccion {
+    display: grid;
+    place-items: center;
+}
+
 .fotoSobreMi {
     height: 50vh;
     background-image: url("../fotos/work.png");
@@ -180,12 +191,29 @@ h4 {
     padding-inline: 200px;
 }
 
-@media screen and (max-width: 900px) {
-    	
-}
-
-@media screen and (max-width: 700px) {
-	
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2,1fr);
+    }
+	h1 {
+        font-size: 24px !important;
+        margin-left: 35px;
+    }
+    .intro {
+        display: grid;
+	    grid-template-columns: repeat(1, 1fr);
+	    gap: 10px;
+        padding: 35px !important;
+    }
+    h3 {
+        text-align: left;
+        font-size: 20px !important;
+    }
+    .texto-parrafo {
+        color: #ffffff;
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -201,6 +229,20 @@ h4 {
     }
     h4 {
         font-size: 14px !important;
+    }
+    .intro {
+        display: grid;
+	    grid-template-columns: repeat(1, 1fr);
+	    gap: 20px;
+        padding: 15px;
+    }
+    h3 {
+        text-align: left;
+        font-size: 16px !important;
+    }
+    .texto-parrafo {
+        color: #ffffff;
+        font-size: 14px;
     }
 
 }
