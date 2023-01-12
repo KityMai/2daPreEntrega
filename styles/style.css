@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.title-primary{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+body{
+    background-color: #121212 !important;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.nav-item.active a,
+.nav-item a:hover {
+    font-weight: 700;
+    color: #ffffff !important;
+}
+
+/* TEXTO PRINCIPAL */
+h1 {
+    color: #ffffff;
+    margin-top: 50px !important; 
+    margin-left: 50px;
+}
+
+.texto-lectura {
+    color: #ffffff;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 800px;
+}
+
+/* BOTON FLOTANTE */
+.wsp {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 80px;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* INTRO */
+.imagenPrincipal {
+    margin-top: 60px;
+    height: 80vh;
+    background-image: url("../fotos/asdas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-inline: 200px;
+}
+
+h2 {
+    color: white;
+    padding: 15px;
+    font-size: 50px;
+}
+
+.intro {
+    padding: 60px;
+    display: flex;
+    gap: 60px;
+    margin-inline: 120px;
+    flex: 1;
+}
+
+h3 {
+    text-align: right;
+    width: 400px;
+}
+
+.hidden {
+    color: rgb(67, 67, 67);
+}
+
+.texto {
+    color: #ffffff;
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #000000;
+    color: white;
+    padding-block: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border-top: #3e3e3e solid 1px;
+    margin-top: 100px;
+}
+
+
+/* TRABAJOS CARDS */
+h4 {
+    color: #b9b9b9;   
+}
+
+.card {
+    background-color: #ffffff19 !important;
+    border-radius: 10px;
+    text-align: center;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.contenedor.card div,
+.contenedor div:hover{
+    width: 103%;
+    transition-duration: 200ms;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+
+	/* Flexbox */
+	display: flex;
+	gap: 20px;
+
+    /* Grid */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.card__imagen {
+    margin-bottom: 10px;
+}
+
+/* CONTACTO */
+.formulario {
+    width: 50%;
+    max-width: 500px;
+	margin: 50px;
+	padding: 40px 0;
+    color: #ffffff;
+}
+
+.btn button,
+.btn button:hover {
+    color: #b9b9b9;
+}
+
+
+/* SOBRE MI */
+.fotoSobreMi {
+    height: 50vh;
+    background-image: url("../fotos/work.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-inline: 200px;
+}
+
+@media screen and (max-width: 900px) {
+    	
+}
+
+@media screen and (max-width: 700px) {
+	
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas: "card__imagen";
+        transition: 200ms;
+    }
+    h1 {
+        font-size: 18px !important;
+        margin-left: 10px;
+    }
+    h4 {
+        font-size: 14px !important;
+    }
+
+}
